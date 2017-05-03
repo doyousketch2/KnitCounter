@@ -7,52 +7,28 @@ RootWidget:
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    BoxLayout:
-      orientation:  'horizontal'
-      size:  (root.width, root.height / 2)
-
-      Button:
-        text:  '-'
-        background_color:  .9, .0, .5,  1
-        on_release:  root.column(-1)
-        size_hint_x:  0.25
-        font_size: dp(33)
-
-      Label:
-        id:  column
-        text:  app.colstr
-        font_size: dp(40)
-
-      Button:
-        text:  '+'
-        background_color:  .9, .0, .5,  1
-        on_release:  root.column(1)
-        size_hint_x:  0.25
-        font_size: dp(33)
-
+    Button:
+      id:  row
+      text:  app.rowstr
+      background_color:  .5, .0, .9,  1
+      on_release:  root.row(1)
+      size_hint_y:  0.5
+      font_size: dp(60)
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BoxLayout:
       orientation:  'horizontal'
-      size:  (root.width, root.height / 2)
+      size_hint_y:  0.08
 
       Button:
         text:  '-'
-        background_color:  .5, .0, .9,  1
+        background_color:  .9, .0, .5,  1
         on_release:  root.row(-1)
-        size_hint_x: 0.25
         font_size: dp(33)
-
-      Label:
-        id:  row
-        text:  app.rowstr
-        font_size: dp(40)
 
       Button:
-        text:  '+'
-        background_color:  .5, .0, .9,  1
-        on_release:  root.row(1)
-        size_hint_x:  0.25
-        font_size: dp(33)
-
+        text:  'Reset'
+        background_color:  .9, .0, .5,  1
+        on_release:  root.row(-500000000)
+        font_size: dp(22)
