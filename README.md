@@ -1,5 +1,7 @@
 # KnitCounter
 
+Python and Kivy are required.
+
 - Debian:  
     `sudo pip3 install kivy`  
 
@@ -11,6 +13,9 @@
     `python -m pip install kivy`  
 
 - Windows:  
+get the latest version of Python  
+https://www.python.org/downloads/windows
+then install Kivy:
     `py -m pip install kivy`  
 
 - Android:  
