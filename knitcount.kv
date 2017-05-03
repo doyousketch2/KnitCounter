@@ -1,0 +1,58 @@
+RootWidget:
+
+<RootWidget>:
+  BoxLayout:
+    orientation:  'vertical'
+    size:  (root.width, root.height)
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    BoxLayout:
+      orientation:  'horizontal'
+      size:  (root.width, root.height / 2)
+
+      Button:
+        text:  '-'
+        background_color:  .9, .0, .5,  1
+        on_release:  root.column(-1)
+        size_hint_x:  0.25
+        font_size: dp(33)
+
+      Label:
+        id:  column
+        text:  app.colstr
+        font_size: dp(40)
+
+      Button:
+        text:  '+'
+        background_color:  .9, .0, .5,  1
+        on_release:  root.column(1)
+        size_hint_x:  0.25
+        font_size: dp(33)
+
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    BoxLayout:
+      orientation:  'horizontal'
+      size:  (root.width, root.height / 2)
+
+      Button:
+        text:  '-'
+        background_color:  .5, .0, .9,  1
+        on_release:  root.row(-1)
+        size_hint_x: 0.25
+        font_size: dp(33)
+
+      Label:
+        id:  row
+        text:  app.rowstr
+        font_size: dp(40)
+
+      Button:
+        text:  '+'
+        background_color:  .5, .0, .9,  1
+        on_release:  root.row(1)
+        size_hint_x:  0.25
+        font_size: dp(33)
+
