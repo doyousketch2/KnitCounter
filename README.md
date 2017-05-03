@@ -8,7 +8,7 @@ Python and Kivy are required.
 - other flavors of Linux:  
     `sudo python3 -m pip install kivy`  
 
-- macOS X:  
+- mac OS X:  
     `sudo easy_install pip`  
     `python -m pip install kivy`  
 
