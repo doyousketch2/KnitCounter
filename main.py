@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 ##=========================================================
-##  atlas.py                                    21 Apr 2017
+##  main.py                                      2 May 2017
 ##
-##  Generates a Kivy Atlas from spritesheet
+##  Row-counter for crochet & knitting
 ##
 ##  Eli Leigh Innis
 ##  Twitter :  @ Doyousketch2
@@ -32,10 +32,7 @@ from kivy .uix .widget  import Widget
 ##=========================================================
 ##  script  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
 class RootWidget(Widget):
-
 
   def column(self, x):
     KnitCount .column += x
@@ -74,4 +71,3 @@ if __name__ == '__main__':
 
 ##=========================================================
 ##  eof  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
