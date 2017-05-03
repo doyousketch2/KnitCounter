@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 ##=========================================================
-##  main.py                                      2 May 2017
+##  main.py                                    21 Apr 2017
 ##
 ##  Row-counter for crochet & knitting
 ##
@@ -26,40 +26,40 @@
 ##=========================================================
 ##  libs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-from kivy .app        import  App                   ##  GUI
+from kivy .app          import  App                 ##  GUI
 from kivy .uix .widget  import Widget
+from kivy .config       import Config
 
 ##=========================================================
 ##  script  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 class RootWidget(Widget):
 
-  def column(self, x):
-    KnitCount .column += x
-    if KnitCount .column < 1:
-      KnitCount .column = 0
-    KnitCount .colstr = str(KnitCount .column)
-    self .ids .column .text = KnitCount .colstr
-
-  def row(self, y):
-    KnitCount .row += y
+  def row(self, x):
+    KnitCount .row += x
     if KnitCount .row < 1:
-      KnitCount .row = 0
-    KnitCount .rowstr = str(KnitCount .row)
-    self .ids .row .text = KnitCount .rowstr
+      KnitCount .row  = 0
+    KnitCount .rowstr  = str(KnitCount .row)
+
+    Config .set('settings',  'row',  KnitCount .row)
+    Config .write()
+
+    self .ids .row .text  = KnitCount .rowstr
 
 
 class KnitCount(App):
   icon  = 'icon.png'
   title  = "Knit Counter  ::  by Doyousketch2"
 
-  column = 0
-  row    = 0
-  colstr = '0'
-  rowstr = '0'
+  Config .read('config.ini')
+
+  row  = Config .getint('settings', 'row')
+  rowstr  = str(row)
 
   def build(self):
     pass
+
 
 
 ##=========================================================
